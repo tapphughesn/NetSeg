@@ -1,0 +1,7 @@
+TO DO:
+
+Create config.py using configparser to store variables for python script (works like JSON)
+Make save dialog have default name of t1 file with _seg appended
+Fix Gtk-Message: 14:18:27.810: GtkDialog mapped without a transient parent. This is discouraged.
+Implement "uncertain" label in segmentation
+Progress bar
