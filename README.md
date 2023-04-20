@@ -1,6 +1,6 @@
 # NetSeg
 
-NetSeg is a software that I developed as part of my honors thesis project at UNC-Chapel Hill, department of Computer Science. It allows the user to use a Convolutional Neural Network (CNN) to segment subcortical brain structures in MR Images (at least 12 months of age). Nick_Honors_Thesis_final.pdf is the written thesis accompanying this project.
+NetSeg is a software that I developed as part of my honors thesis project at UNC-Chapel Hill, department of Computer Science. It allows the user to use a Convolutional Neural Network (CNN) to segment subcortical brain structures in MR Images (at least 12 months of age). Nick_Honors_Thesis_final.pdf is the written thesis accompanying this project--it contains an in-depth description of the methods used here.
 
 ## Usage
 
