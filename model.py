@@ -1,15 +1,30 @@
+"""
+Contains code for the NetSeg neural network architecture.
+"""
 import tensorflow as tf
 from tensorflow.keras.layers import *
 from tensorflow.keras import *
 
 class unet_4(tf.keras.Model):
+    """
+    Class for the u-net model I use for segmentation.
+    """
     
     def __init__(self, input_shape = (None,96,112,96), num_classes = 7):
+        """
+        Initialize u-net model.
+
+        Args:
+            input_shape: tuple describing input shape of 3D images.
+            num_classes: int, number of segmentation classes
+
+        Returns:
+            An initialized u-net model.
+        """
         
         super(unet_4, self).__init__()
 
         self.num_classes=num_classes
-        # self.first_glob = True
 
         # ENCODER
 
@@ -48,11 +63,17 @@ class unet_4(tf.keras.Model):
         self.conv7_2 = Conv3D(num_classes, 3, activation = 'softmax', padding = 'same', data_format='channels_last',  kernel_initializer = 'GlorotNormal')
     
     def call(self, inputs, training_bool = True):
-        # if self.first_glob:
-        #     self._set_inputs(inputs)
+        """
+        Passes an input "forward" through the model and produces an inference.
 
-        # self.first_glob = False
-
+        Args:
+            inputs: 3D tensor comprising the input image
+            training_bool: whether or not the model is training during this forward pass.
+                If true, affects dropout layers. 
+        
+        Returns:
+            Output segmentation probability map.
+        """
         level1 = self.input1(inputs)
         level1 = self.conv1_0(level1)
         level1 = self.conv1_1(level1)

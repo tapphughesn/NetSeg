@@ -1,3 +1,8 @@
+"""
+Main module for NetSeg. 
+Parses CLI command for segmenting a MR image. 
+Preprocesses and segments image using u-net model.
+"""
 import tensorflow as tf
 import os
 import SimpleITK as sitk
@@ -12,9 +17,21 @@ from glob import glob
 # use process id in temp file name
 # use configure.py to store variables like template, cropping size, probability threshold, etc
 
-
 # Main Function
 def main(main_args):
+    """
+    Preprocesses and segments MR Image.
+
+    Args:
+        main_args: passed in from CLI interface.
+            Contains t1 and t2 modality images,
+            NetSeg directory,
+            Save path for segmentation map output,
+            Save path for probability map output.
+    
+    Returns:
+        None
+    """
     
     t1_image = main_args.t1
     t2_image = main_args.t2
