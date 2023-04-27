@@ -2,7 +2,7 @@
 
 ## General Purpose
 
-NetSeg is a program I developed in 2020 alongside my honors thesis. It is intended to be available for use by others as an option for segmenting subcortical structures. 
+NetSeg is a program I developed in 2020 alongside my honors thesis. It is intended to be available for use by others as an option for segmenting subcortical structures from MR images. 
 
 ## Structure
 
